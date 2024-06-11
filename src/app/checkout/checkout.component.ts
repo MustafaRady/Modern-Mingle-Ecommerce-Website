@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../shared/data.service';
 import { Garment } from '../models/product';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
@@ -11,10 +10,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CheckoutComponent implements OnInit {
 
-  orders:Array<Garment>;
+  error:string = "";
+  order:Garment;
   subTotal:number = 0;
   form :any; 
   product:Garment;
+  productInfo:{
+    color:string,
+    size:string
+  }={ color: '', size: '' };
   
   
   constructor(
@@ -22,9 +26,9 @@ export class CheckoutComponent implements OnInit {
   ){
 
     this.form = new FormGroup({
-        fullName:new FormControl(''),
-        address:new FormControl(),
-        city:new FormControl(),
+        fullName:new FormControl('',Validators.required),
+        address:new FormControl('',Validators.required),
+        city:new FormControl('',Validators.required),
       }
     );
   }
@@ -34,38 +38,52 @@ export class CheckoutComponent implements OnInit {
       (params)=>{
         if(params['product']){
           this.product = JSON.parse(params['product']);
-          this.orders = [this.product];
+          this.order = this.product;
           this.subTotal = this.product.price;
           console.log(this.product)
         }
+        if(params['color']){
+          console.log(params['color'])
+            this.productInfo.color=params['color'];
+        }
+        if(params['size']){
+            this.productInfo.size=params['size'];
+        }
       }
     )
+    
     
   }
 
 
   onSubmit():void {
-    console.log(this.form.value);
-    const message = {
-      fullName: this.form.value.fullName,
-      address: this.form.value.address,
-      city: this.form.value.city,
-      order: this.orders,
-      subTotal: this.subTotal
+
+    if(this.form.valid){
+      const message = {
+        fullName: this.form.value.fullName,
+        address: this.form.value.address,
+        city: this.form.value.city,
+        order: this.order.name,
+        subTotal: this.subTotal,
+        color:this.productInfo.color,
+        size:this.productInfo.size
+      } 
+      let messageToSent = 
+      "Full Name: "+message.fullName+"\n"+
+      "Address: "+message.address+"\n"+
+      "City: "+message.city+"\n"+
+      "Order: " + message.order + "\n" +
+      "Sub Total: "+message.subTotal+" $";
+
+      const shopOwnerNumber = '+96176771908'; // Shop owner's WhatsApp number in international format without '+'
+      const encodedMessage = encodeURIComponent(messageToSent);
+      const url = `https://wa.me/${shopOwnerNumber}?text=${encodedMessage}`;
+      this.error ='';
+      window.open(url, '_blank');
     }
-
-    let messageToSent = 
-    "Full Name: "+message.fullName+"\n"+
-    "Address: "+message.address+"\n"+
-    "City: "+message.city+"\n"+
-    "Order: " + 
-    message.order.map((item)=>item.name).join(", ") + "\n" +
-    "Sub Total: "+message.subTotal+" $";
-
-    const shopOwnerNumber = '########'; // Shop owner's WhatsApp number in international format without '+'
-    const encodedMessage = encodeURIComponent(messageToSent);
-    const url = `https://wa.me/${shopOwnerNumber}?text=${encodedMessage}`;
-    console.log(url)
-    window.open(url, '_blank');
+    else{
+      
+      this.error = "Please fill all the fields!";
+    }
   }
 }

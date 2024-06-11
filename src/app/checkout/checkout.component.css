@@ -128,3 +128,12 @@
   flex-direction: column;
   gap: 10px;
 }
+
+.color-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 10px;
+  border: 2px solid transparent; /* Add border for selected effect */
+}

@@ -11,7 +11,7 @@ import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireModule} from '@angular/fire/compat'
@@ -48,6 +48,7 @@ import { SubstringPipe } from './pipes/substring.pipe';
   ],
   imports: [
     BrowserAnimationsModule,
+    FormsModule,
     ReactiveFormsModule,
     BrowserModule,
     HttpClientModule,

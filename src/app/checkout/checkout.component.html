@@ -23,33 +23,37 @@
                         <td>
                             Total
                         </td>
+                        <td>
+                            Size
+                        </td>
+                        <td>
+                            Color
+                        </td>
                     </tr>
                     
-                    <tr *ngFor="let item of orders ; let i = index">
+                    <tr >
                         <td style="padding-left: 4%;">
-                            {{item.name}}
+                            {{order.name}}
                         </td>
                         <td>
-                            {{item.price}} $
+                            {{order.price}} $
                         </td>
-                    </tr>
-    
-                    <tr>
-                        <td> SubTotal</td>
                         <td>
-                            {{subTotal}} $ 
+                            {{productInfo.size}} 
+                        </td>
+                        <td>
+                            <div [style.background-color]="productInfo.color" class="color-circle"></div>
                         </td>
                     </tr>
-    
                 </table>
             </div>
         </div>
     
-        <div class="danger">
+        <div class="danger" *ngIf="error " >
             Please Fill The Required Inputs
         </div>
         <div class="placeOrderContainer">
-            <button type="submit" class="placeOrder" [disabled]="form.invalid">
+            <button type="submit" class="placeOrder" >
                 PLACE AN ORDER
             </button>
         </div>

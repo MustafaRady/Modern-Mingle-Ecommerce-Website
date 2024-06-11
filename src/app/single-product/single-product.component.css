@@ -3,21 +3,18 @@
 .product-price,
 .product-description,
 .product-button,
-.category,
-.tag {
+.category{
     display: flex;
     flex: wrap;
 }
 
 .product-price{
     font-size: 1.5rem;
-    font-weight: 600;
     color: #000;
 
 }
 .product-name  {
     font-size: 2rem;
-    font-weight: 600;
     color: #000;
 }
 .details-container{
@@ -92,22 +89,12 @@
     background-color: #0056b3;
 }
 
-/* Tags */
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    flex-direction: row;
-}
-
-
 .product-size {
     margin-top: 15px;
 }
 
 .product-size label {
     margin-right: 10px;
-    font-weight: bold;
 }
 
 .product-size select {
@@ -128,4 +115,53 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.colors {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px; /* Add margin for spacing */
+  }
+  
+  select {
+    padding: 5px;
+  }
+  
+  .color-circles {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .color-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 10px;
+    border: 2px solid transparent; /* Add border for selected effect */
+  }
+  
+  .color-circle.selected {
+    
+    border-color: rgb(0, 0, 0); /* Highlight selected color */
+  }
+  .color-circle-label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

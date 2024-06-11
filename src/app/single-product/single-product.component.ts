@@ -11,8 +11,10 @@ import { CheckoutComponent } from '../checkout/checkout.component';
   styleUrl: './single-product.component.css'
 })
 export class SingleProductComponent implements OnInit{
-   product:Garment;
-
+    product:Garment;
+    selectedColor:string = '#FF0000';
+    selectedSize:string = '';
+    error:string = null;
     constructor(
       private route :ActivatedRoute,
       private productService :ProductService,
@@ -21,6 +23,15 @@ export class SingleProductComponent implements OnInit{
 
     ngOnInit(): void {
       this.getProduct();
+    }
+
+    selectColor(color:string):void {
+      this.selectedColor = color;
+    }
+
+    selectSize(size:Event):void {
+      const sizeSelected = size.target as HTMLSelectElement
+      this.selectedSize = sizeSelected.value;
     }
 
     getProduct():any {
@@ -38,9 +49,18 @@ export class SingleProductComponent implements OnInit{
     }
 
     buy(garment:Garment):void {
-      
-
-      this.router.navigate(['checkout'],{ queryParams: { product: JSON.stringify(garment) } })
+      if(this.selectedColor === '' || this.selectedSize === ''){
+        this.error = 'Please select a color and size';
+        return;
+      }
+      this.error=null;
+      this.router.navigate(['checkout'],
+        { queryParams: 
+          { product: JSON.stringify(garment),
+            color: this.selectedColor,
+            size:this.selectedSize
+          } 
+        })
       
     }
 

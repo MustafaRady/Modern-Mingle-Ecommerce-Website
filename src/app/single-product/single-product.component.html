@@ -17,44 +17,44 @@
                     {{product.price}} $
                 </div>
             </div>
+
+            <div class="category">
+                Category: {{product.category}}
+            </div>
+
             <div class="group1">
                 {{product.material}}
             </div>
-            
+
             <div class="product-description">
                 {{product.description}}
             </div>
 
             <div class="product-size">
                 <label for="size">Select Size:</label>
-                <select id="size" >
-                    <option *ngFor="let size of product.sizes" [value]="size">{{size}}</option>
+                <select id="size" (change)="selectSize($event)">
+                    <option *ngFor="let size of product.sizes" [value]="size" >{{size}}</option>
                 </select>
             </div>
-            
+
+            <div class="color-circles">
+                <div class="color-circle-label">Select Color:</div>
+                <div *ngFor="let color of product.colors" 
+                     [style.background-color]="color" 
+                     (click)="selectColor(color)"
+                     class="color-circle"
+                     [class.selected]="color === selectedColor">
+                </div>
+            </div>
+
             <div class="product-reviews">
                 <div class="rating">
                     <span>Average Rating: {{product.rating}}/5</span>
-                    <!-- Star rating representation can go here -->
                 </div>
-                
             </div>
 
             <div class="additional-info">
-                <!-- <div class="availability">
-                    <span [class.in-stock]="product.inStock">In Stock</span>
-                    <span [class.out-of-stock]="!product.inStock">Out of Stock</span>
-                </div> -->
-                
-                <div class="category">
-                    Category: {{product.category}}
-                </div>
-                <div class="tags">
-                    Tags: 
-                    <div class="tag" *ngFor="let tag of product.tags">
-                        {{tag}}
-                    </div>
-                </div>
+                <span class="danger" *ngIf="error">{{error}}</span>
                 <div class="actions">
                     <div class="product-button" (click)="buy(product)">
                         Buy Now 
