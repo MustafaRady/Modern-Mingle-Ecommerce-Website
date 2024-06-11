@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Garment } from '../models/product';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import namer from 'color-namer';
 
 @Component({
   selector: 'app-checkout',
@@ -43,8 +44,8 @@ export class CheckoutComponent implements OnInit {
           console.log(this.product)
         }
         if(params['color']){
-          console.log(params['color'])
-            this.productInfo.color=params['color'];
+            let name = namer(params['color']).basic[0].name
+            this.productInfo.color=name;
         }
         if(params['size']){
             this.productInfo.size=params['size'];
@@ -72,6 +73,7 @@ export class CheckoutComponent implements OnInit {
       "Full Name: "+message.fullName+"\n"+
       "Address: "+message.address+"\n"+
       "City: "+message.city+"\n"+
+      "Color: "+message.color+"\n"+
       "Order: " + message.order + "\n" +
       "Sub Total: "+message.subTotal+" $";
 
