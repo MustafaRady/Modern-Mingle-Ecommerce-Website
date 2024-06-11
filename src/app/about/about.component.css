@@ -1,0 +1,100 @@
+*{
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.aboutUs-container{
+    width: 100%;
+    max-width: 100%;
+}
+
+.headingImg img{
+    width: 100%;
+    display: block;
+}
+
+.aboutUs-container-1{
+    width: 90%;
+    margin: auto;
+}
+
+.imgGroup-1 {
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust spacing between the images */
+    gap: 20px; /* Add some space between images */
+}
+
+.img{
+    flex: 1;
+}
+
+
+.img img {
+    width: 100%;
+    height: auto;
+}
+
+/* Founders */
+
+.founders-group{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; /* Adjust spacing between the founders */
+    gap: 20px; /* Add some space between founders */
+    margin-top: 30px;
+}
+
+.founder-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Add some space between the founder details */
+}
+
+.founderImg img{
+    width: 200px;
+}
+
+.title{
+    margin-top: 70px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* Testemonials */
+
+.testimonials{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 60px; /* Add some space between testimonials */
+    margin-top: 70px;
+}
+
+.testimonialTitle{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.testimonial-group{
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Add some space between the testimonial details */
+}
+
+.testimonialDetails{
+    display: flex;
+    flex-direction: column;
+    gap: 35px; /* Add some space between the testimonial details */
+}
+
+.quote{
+    width: 20px;
+    height: 20px;
+}

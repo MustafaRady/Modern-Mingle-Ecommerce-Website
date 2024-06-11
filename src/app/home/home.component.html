@@ -1,0 +1,92 @@
+<div class="home-container">
+    <div class="home-background-container">
+        <img src="../../assets/images/img_1.png" class="home-img"/>
+        <div class="headline-group">
+            <h1>
+                STYLIST PICKS BEAT THE HEAT
+            </h1>
+            <button class="shopNow-button" routerLink="products">
+                Shop Now
+            </button>
+        </div>
+    </div>
+    
+    <div class="body-container">
+        <!-- Heading -->
+        <div class="heading">
+            <h2 class="home-heading">
+                Discover New Arrivals
+            </h2>
+            <h4 class="home-subHeading">
+                Recently Added Shirts
+            </h4>
+        </div>
+
+
+        <!-- Product Cards -->
+        <div class="products" >
+            <app-loader *ngIf="isLoading"></app-loader >
+            <div class="product-group" *ngFor="let product of products " (click)="navigate(product.id)">
+                <app-card [product]="product" ></app-card>
+            </div>
+        </div>
+
+        <div class="viewMore" routerLink="products">
+            View More
+        </div>
+
+        <!-- service -->
+        <div class="services">
+            <div class="service-group" *ngFor="let service of services">
+                <img class="service-img" [src]="service.img"/>
+                <div class="service-details">
+                    <div class="service-title">
+                        {{service.title}}
+                    </div>
+                    <div class="service-description">
+                        {{service.description}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Promo -->
+        <div class="promo">
+            <div class="promo-group">
+                <div class="promo-title">
+                    PEACE OF MIND 
+                </div>
+                <div class="promo-description">
+                    A one-stop platform for all your fashion needs, hassle-free. Buy with a peace of mind.
+                </div>
+                <div class="promo-button" routerLink="products">
+                    Buy Now
+                </div>
+            </div>
+        </div>
+
+        <!-- TOP SELLERS -->
+        <div class="topSellers-container">
+            <div class="topSellers-title">
+                TOP SELLERS
+            </div>
+            <div class="topSellers-subtitle">
+                Best selling items of the week
+            </div>
+        </div>
+
+        <!-- Top Sellers Items -->
+        <div class="topSellersItems-container" >
+            <div class="topSellers-group" *ngFor="let topSeller of topSellers">
+                <app-card [product]="topSeller"></app-card>
+            </div>
+        </div>
+
+        <!-- SHOP NOW -->
+        <div class="shopNow">
+            <button class="shopNowButton" routerLink="products">
+                SHOP NOW
+            </button>
+        </div>
+    </div>
+</div>

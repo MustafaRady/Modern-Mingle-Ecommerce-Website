@@ -1,0 +1,64 @@
+<div class="checkoutContainer"> 
+    <div class="checkoutTitle">
+        Billing Details
+    </div>
+    <form class="checkoutForm" [formGroup] ='form' (submit)="onSubmit()">
+        <div class="formInputs">
+            <input type="text" placeholder="Full Name" formControlName="fullName" >
+            <input type="text" placeholder="Address" formControlName="address" >
+            <input type="text" placeholder="Town /City" formControlName="city" >
+        
+        </div>
+       
+        <div class="yourOrderContainer">
+            <div class="yourOrderTitle">
+                Your Order
+            </div>
+            <div class="table-wrapper">
+                <table class="totalTable">
+                    <tr>
+                        <td>
+                            Product
+                        </td>
+                        <td>
+                            Total
+                        </td>
+                    </tr>
+                    
+                    <tr *ngFor="let item of orders ; let i = index">
+                        <td style="padding-left: 4%;">
+                            {{item.name}}
+                        </td>
+                        <td>
+                            {{item.price}} $
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td> SubTotal</td>
+                        <td>
+                            {{subTotal}} $ 
+                        </td>
+                    </tr>
+    
+                </table>
+            </div>
+        </div>
+    
+        <div class="danger">
+            Please Fill The Required Inputs
+        </div>
+        <div class="placeOrderContainer">
+            <button type="submit" class="placeOrder" [disabled]="form.invalid">
+                PLACE AN ORDER
+            </button>
+        </div>
+    </form>
+
+    
+    
+
+    <div class="footerDetail">
+        Cash on delivery.  Please contact us if you require assistance or wish to make alternate arrangements.
+    </div>
+</div>

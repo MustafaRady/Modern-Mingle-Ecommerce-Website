@@ -1,0 +1,104 @@
+.groupItems{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.productsContainer{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.group{}
+
+.groupTitle{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.groupTitle {
+    font-family: 'Arial', sans-serif;
+    font-size: 2em;
+    color: #000000; /* Green */
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+  }
+  
+  .groupTitle::before, .groupTitle::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background-color: #000000;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+  }
+  
+  .groupTitle::before {
+    left: 0;
+    transform: translateX(-120%);
+  }
+  
+  .groupTitle::after {
+    right: 0;
+    transform: translateX(120%);
+  }
+
+.containerTitle{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+
+}
+
+.productGroupWrapper{
+    overflow-x: auto; /* Enables horizontal scrolling */
+    width: 100%;
+    display: flex;
+    
+    gap:70px; /* Add gap between the product groups */
+    flex-direction: row;
+     /* Hide scrollbar for WebKit-based browsers */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+
+.products{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Add gap between the products */
+    justify-content: center;
+}
+
+.productGroup{
+    padding: 1%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px; /* Add gap between the garment details */
+}
+
+.productImg{
+    width: 200px;
+    display: block; /* Ensure no extra space below the image */
+}
+
+.productImg img{
+    width: 100%;
+    height: auto;
+}
+
+
+

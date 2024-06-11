@@ -1,0 +1,57 @@
+<div class="cart-container">
+    <div class="cart-title">
+        Cart
+    </div>
+    
+    <div class="table-wrapper" *ngIf="cart.length >0 ">
+        <table class="cart-table" >
+            <tr >
+                <td>
+                    Product
+                </td>
+                <td>
+                    Price
+                </td>
+                <td>
+                    Quantity
+                </td>
+                <td>
+                    Total
+                </td>
+                <td>
+                    
+                </td>
+            </tr>
+            <tr *ngFor="let item of cart ; let i = index">
+                <td>
+                    {{item.name}}
+                </td>
+                <td>
+                    {{item.price}}
+                </td>
+                <td>
+                    0
+                </td>
+                <td>
+                    0
+                </td>
+                <td (click)="removeItem(i)">
+                    REMOVE
+                </td>
+            </tr>
+        </table>
+
+        <div class="checkout" (click)="proceedToCheckout()">
+            Proceed To Checkout 
+        </div>
+      
+    </div>
+    
+
+    <!-- src/app/cart/cart.component.html -->
+    <div *ngIf="cart.length == 0" class="empty-cart-message">
+        No items in the cart
+    </div>
+
+    
+</div>

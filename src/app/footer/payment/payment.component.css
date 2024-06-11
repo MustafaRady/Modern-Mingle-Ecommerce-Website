@@ -1,0 +1,104 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Container */
+  .payments {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading Styles */
+  .payments h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .payments h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #555;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+  }
+  
+  .payments h3 {
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #666;
+  }
+  
+  /* Paragraph and List Styles */
+  .payments p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .payments ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #666;
+  }
+  
+  .payments ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* Link Styles */
+  .payments a {
+    color: #1e90ff;
+    text-decoration: none;
+  }
+  
+  .payments a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Section Styles */
+  .payments section {
+    margin-bottom: 20px;
+  }
+  
+  /* Contact Information Styles */
+  .payments .contact-info {
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+  }
+  
+  /* Button Styles */
+  .payments button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #1e90ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .payments button:hover {
+    background: #1c86ee;
+  }
+  

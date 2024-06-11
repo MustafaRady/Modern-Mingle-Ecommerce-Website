@@ -1,0 +1,57 @@
+<div class="aboutUs-container">
+    <div class="headingImg">
+        <img src="../../assets/images/aboutUs/img1.jpg" alt=""/>
+    </div>
+
+    <div class="aboutUs-container-1">
+        <div class="imgGroup-1">
+            <div class="img" >
+                <img src="../../assets/images/aboutUs/img2.png"/>
+            </div>
+            <div class="img">
+                <img src="../../assets/images/aboutUs/img3.png" alt="">
+            </div>
+        </div>
+    
+
+        <!-- the founders -->
+        <div class="founders-container">
+            <div class="title">
+                The Founders
+            </div>
+
+            <div class="founders-group">
+                <div class="founder-group" *ngFor="let founder of founders">
+                    <div class="founderImg">
+                        <img [src]="founder.imgPath"/>
+                    </div>
+                    <div class="founderName">
+                        {{founder.name}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="testimonials">
+            <div class="testimonialTitle">
+                Testimonials
+            </div>
+            <div class="testimonial-group" *ngFor="let testimonial of testimonials">
+                <div class="testimonial-img">
+                    <img [src]="testimonial.imgPath" alt="">
+                </div>
+                <div class="testimonialDetails">
+                    <img src="../../assets/images/aboutUs/testimonials/quote.png" class="quote"/>
+                    <div class="testimonialText">
+                        {{testimonial.details}}
+                    </div>
+                    <div class="testimonialWriter">
+                        {{testimonial.name}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

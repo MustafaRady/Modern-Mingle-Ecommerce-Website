@@ -1,0 +1,37 @@
+<!-- src/app/register/register.component.html -->
+<div class="auth-container">
+  <h2 *ngIf="isRegistering; else loginTemplate">Register</h2>
+  <h2 *ngIf="!isRegistering">Login</h2>
+  
+  <form [formGroup]="registerForm" *ngIf="isRegistering" (ngSubmit)="onRegister()">
+    <div>
+      <label for="register-email">Email:</label>
+      <input id="register-email" formControlName="email" type="email" required />
+    </div>
+    <div>
+      <label for="register-password">Password:</label>
+      <input id="register-password" formControlName="password" type="password" required />
+    </div>
+    <button type="submit" [disabled]="registerForm.invalid">Register</button>
+  </form>
+  
+  <ng-template #loginTemplate>
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <div>
+        <label for="login-email">Email:</label>
+        <input id="login-email" formControlName="email" type="email" required />
+      </div>
+      <div>
+        <label for="login-password">Password:</label>
+        <input id="login-password" formControlName="password" type="password" required />
+      </div>
+      <button type="submit" [disabled]="loginForm.invalid">Login</button>
+    </form>
+  </ng-template>
+  
+  <button (click)="toggleForm()">
+    {{ isRegistering ? 'Already have an account? Login' : 'Don\'t have an account? Register' }}
+  </button>
+  
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+</div>

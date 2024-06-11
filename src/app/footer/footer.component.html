@@ -1,0 +1,27 @@
+<div class="footer-container">
+    <div class="footer-container-1">
+        <div class="footerGroup" *ngFor="let link of links">
+            <div class="footerTitle">
+                {{link.title}}
+            </div>
+            <div class="footerDetails" >
+                <div class="oneLink" *ngFor=" let oneLink of link.links">
+                    <div class=""  [routerLink]="oneLink.route" >
+                        {{oneLink.name}}
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-container-1">
+        <div class="footer-group-2">
+            <div class="paymentsIcons" *ngFor="let payment of payments">
+                <img [src]="payment" alt=""/>
+            </div>
+        </div>
+    </div>
+</div>
+

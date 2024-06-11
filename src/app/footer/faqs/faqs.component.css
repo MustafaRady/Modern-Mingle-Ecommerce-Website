@@ -1,0 +1,83 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Container */
+  .faqs {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading Styles */
+  .faqs h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .faqs h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #555;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+  }
+  
+  .faqs h3 {
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #666;
+  }
+  
+  /* Paragraph and List Styles */
+  .faqs p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .faqs ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #666;
+  }
+  
+  .faqs ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* Link Styles */
+  .faqs a {
+    color: #1e90ff;
+    text-decoration: none;
+  }
+  
+  .faqs a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Section Styles */
+  .faqs section {
+    margin-bottom: 20px;
+  }
+  
+  /* FAQ Item Styles */
+  .faq-item {
+    margin-bottom: 20px;
+  }
+  

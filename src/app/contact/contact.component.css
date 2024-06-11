@@ -1,0 +1,143 @@
+*{
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+      
+}
+
+.contact-background{
+    width: 100%;
+}
+
+.name , .email{
+    padding: 2%;
+}
+
+.contact-background img{
+    width: 100%;
+    display: block;
+}
+
+.contact-container-1{
+    margin: auto;
+    margin-top: 20px;
+    width: 90%;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contactUsFormContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contactUsForm{
+    display: flex;
+    
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contactUsFormTitle{
+    font-size: 1.5rem;
+
+}
+
+.nameAndEmail{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.nameAndEmail input{
+    flex: 1
+}
+
+.submitButton{
+    width: 30%;
+    padding: 2%;
+    color:white;
+    background-color: #024E82;
+}
+
+.contactUsDetailsGroup{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 5% 0%;
+}
+
+.visitUsGroup{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.visitUsDetail , .getInTouchDetail{
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 100;
+    font-size: smaller;
+    font-style: normal;
+}
+
+.getInTouchGroup{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Message SuccessFully */
+.messageSuccessfully {
+    position: fixed;
+    top: -100%; /* Start off-screen at the top */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f0f0f0; /* Example background color */
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000; /* Make sure it appears above other content */
+    animation: slideDown 0.5s forwards;
+}
+
+@keyframes slideDown {
+    from {
+        top: -100%;
+    }
+    to {
+        top: 10%;
+    }
+}
+
+.messageSuccessfullyTitle {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.messageSuccessfullySubtitle {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.messageSuccessfullyButton {
+    margin-top: 10px;
+}
+
+.messageSuccessfullyButton button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Example button color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.messageSuccessfullyButton button:hover {
+    background-color: #0056b3; /* Example hover color */
+}

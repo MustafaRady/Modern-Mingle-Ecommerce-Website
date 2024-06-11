@@ -1,0 +1,27 @@
+<div class="navbar-container">
+        <div class="navbar-logo">
+            <a routerLink="/">
+                <img src="../../assets/images/Eco Friendly Plant Illustration Word Mark Logo.png" class="nav-logo"  alt="logo" />
+            </a>
+        </div>
+        <div class="navbar-links">
+            <a routerLink="/">Home</a>
+            <a routerLink="/about">About</a>
+            <a routerLink="/contact">Contact</a>
+            <a routerLink="/products">Explore</a>
+        </div>
+        <div class="navbar-icons">
+            <img src="../../assets/images/shopping-bag.png" class="nav-icon" routerLink="/cart"/>
+            <img src="../../assets/images/menu.png" class="nav-menu-icon" (click)="toggleMenu()" />
+        </div>
+        <!-- Menu for Small Screens -->
+        <div class="navbar-menu " *ngIf="isMenuOpen">
+            <a routerLink="/" (click)="toggleMenu()" >Home</a>
+            <a routerLink="/about" (click)="toggleMenu()">About</a>
+            <a routerLink="/contact" (click)="toggleMenu()">Contact</a>
+            <button class="backButton" (click)="toggleMenu()">
+                Back
+            </button>
+        </div>
+    
+</div>
