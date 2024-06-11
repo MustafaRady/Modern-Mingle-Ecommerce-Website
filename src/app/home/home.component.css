@@ -9,6 +9,7 @@
 
 .home-img {
     width: 100%;
+    height: auto;
     display: block; /* Ensure no extra space below the image */
 }
 
