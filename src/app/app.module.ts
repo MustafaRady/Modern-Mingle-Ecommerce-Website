@@ -12,16 +12,14 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireModule} from '@angular/fire/compat'
 import { environment } from '../environments/environment';
 import { ProductsComponent } from './products/products.component';
 import { LoaderComponent } from './sharedComponents/loader/loader.component';
 import { CardComponent } from './sharedComponents/card/card.component';
-import { CarouselComponent, CarouselModule } from 'ngx-owl-carousel-o';
-import { AuthComponent } from './auth/login/auth.component';
-import { AuthInterceptor } from './services/auth.interceptor';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import { PaymentComponent } from './footer/payment/payment.component';
 import { CancellationComponent } from './footer/cancellation/cancellation.component';
 import { TermsAndConditionComponent } from './footer/terms-and-condition/terms-and-condition.component';
@@ -42,7 +40,6 @@ import { SubstringPipe } from './pipes/substring.pipe';
     ProductsComponent,
     LoaderComponent,
     CardComponent,
-    AuthComponent,
     PaymentComponent,
     CancellationComponent,
     TermsAndConditionComponent,
@@ -60,7 +57,7 @@ import { SubstringPipe } from './pipes/substring.pipe';
     AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+    
   ],
   bootstrap: [AppComponent]
 })

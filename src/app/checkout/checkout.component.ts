@@ -63,7 +63,7 @@ export class CheckoutComponent implements OnInit {
     message.order.map((item)=>item.name).join(", ") + "\n" +
     "Sub Total: "+message.subTotal+" $";
 
-    const shopOwnerNumber = '96170705763'; // Shop owner's WhatsApp number in international format without '+'
+    const shopOwnerNumber = '########'; // Shop owner's WhatsApp number in international format without '+'
     const encodedMessage = encodeURIComponent(messageToSent);
     const url = `https://wa.me/${shopOwnerNumber}?text=${encodedMessage}`;
     console.log(url)
