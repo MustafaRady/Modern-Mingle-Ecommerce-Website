@@ -50,10 +50,10 @@ export class FooterComponent {
   
 
   payments:Array<string>=[
-    "../../assets/images/services2/cash-on-delivery.png",
-    "../../assets/images/services2/dollar-symbol.png",
-    "../../assets/images/services2/lebanese-pound.png",
-    "../../assets/images/services2/whatsapp (1).png",
+    "../../assets/images/services2/cash-on-delivery.webp",
+    "../../assets/images/services2/dollar-symbol.webp",
+    "../../assets/images/services2/lebanese-pound.webp",
+    "../../assets/images/services2/whatsapp (1).webp",
   ]
 
   onSubmit(){

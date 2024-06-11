@@ -38,8 +38,7 @@ export class SingleProductComponent implements OnInit{
       this.productService.getById(productId).subscribe(
         (product)=>{
           this.product = product ;
-          console.log('Product fetched successfully!') 
-          console.log(product)
+          this.selectedSize = this.product.sizes[0];
         }, (error)=>{
           console.error('Error fetching product: ', error);
         }

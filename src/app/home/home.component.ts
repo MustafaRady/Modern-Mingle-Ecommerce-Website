@@ -24,10 +24,14 @@ export class HomeComponent implements OnInit {
  
 
   ngOnInit(): void {
+
+    this.preloadImage("../../assets/images/img_1.png");
+
     this.isLoading = true;
     this.productService.getAll().subscribe(
       (data: Garment[]) => {
         this.products = data;
+        console.log(this.products)
         this.isLoading = false;
         this.products= this.products.slice(0,5);
       },
@@ -49,7 +53,7 @@ export class HomeComponent implements OnInit {
   }
 
 
-    services: Array<Services> = [
+  services: Array<Services> = [
       {
         title: "24/7 Customer Support",
         img: "../../assets/images/services/service1.png",
@@ -70,13 +74,16 @@ export class HomeComponent implements OnInit {
         img: "../../assets/images/services/service4.png",
         description: "Return any item within 30 days for a hassle-free exchange or refund."
       }
-    ]
+  ]
     
-
-
-
   navigate( productId :string){
     this.router.navigate(['/product',productId]);
     
+  }
+
+  preloadImage(url:string){
+    const image = new Image();
+    image.src = url ; 
+
   }
 }
