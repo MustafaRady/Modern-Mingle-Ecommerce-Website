@@ -8,7 +8,6 @@ import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ProductsComponent } from './products/products.component';
 import { ExtraOptions } from '@angular/router';
-import { AuthComponent } from './auth/login/auth.component';
 import { PaymentComponent } from './footer/payment/payment.component';
 import { CancellationComponent } from './footer/cancellation/cancellation.component';
 import { TermsAndConditionComponent } from './footer/terms-and-condition/terms-and-condition.component';
@@ -42,10 +41,6 @@ const routes: Routes = [
   {
     path:'products',component:ProductsComponent
   },
-  {
-    path:'register',component:AuthComponent
-  },
-
   {
     path:'payments',component:PaymentComponent
   },

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../shared/data.service';
 import { Garment } from '../models/product';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { WhatsappService } from '../shared/whatsapp.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({

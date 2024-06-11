@@ -3,7 +3,6 @@ import { Garment } from '../models/product';
 import { Services } from '../models/services';
 import { Router } from '@angular/router';
 import { ProductService } from '../services/productService.service';
-import { WhatsappService } from '../shared/whatsapp.service';
 import { first } from 'rxjs';
 
 
