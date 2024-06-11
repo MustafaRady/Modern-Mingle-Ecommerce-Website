@@ -19,7 +19,6 @@ import { environment } from '../environments/environment';
 import { ProductsComponent } from './products/products.component';
 import { LoaderComponent } from './sharedComponents/loader/loader.component';
 import { CardComponent } from './sharedComponents/card/card.component';
-import { CarouselModule } from 'ngx-owl-carousel-o';
 import { PaymentComponent } from './footer/payment/payment.component';
 import { CancellationComponent } from './footer/cancellation/cancellation.component';
 import { TermsAndConditionComponent } from './footer/terms-and-condition/terms-and-condition.component';
@@ -49,7 +48,6 @@ import { SubstringPipe } from './pipes/substring.pipe';
   ],
   imports: [
     BrowserAnimationsModule,
-    CarouselModule,
     ReactiveFormsModule,
     BrowserModule,
     HttpClientModule,
