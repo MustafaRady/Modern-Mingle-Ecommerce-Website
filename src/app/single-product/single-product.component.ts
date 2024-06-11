@@ -1,9 +1,7 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Garment } from '../models/product';
 import { ActivatedRoute, ActivationEnd, Router } from '@angular/router';
-import { DataService } from '../shared/data.service';
 import { ProductService } from '../services/productService.service';
-import { CheckoutComponent } from '../checkout/checkout.component';
 
 @Component({
   selector: 'app-single-product',
