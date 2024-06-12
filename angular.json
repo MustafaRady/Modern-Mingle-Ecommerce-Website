@@ -23,10 +23,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/my-first-app/docs",
+            "outputPath": "dist/my-first-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "baseHref": "/Modern-Mingle-Ecommerce-Pages/",
             "polyfills": [
               "zone.js"
             ],
