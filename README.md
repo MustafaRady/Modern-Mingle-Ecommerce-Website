@@ -1,27 +1,25 @@
-# MyFirstApp
+# Clothing Store Dashboard and E-commerce Website
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.9.
+This repository contains both the Angular-based dashboard for managing a clothing store and the user-facing e-commerce website.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+- **E-commerce Website**:
+  - Explore different categories of clothes.
+  - Make purchases directly on the website.
+  - WhatsApp Integration: Seamless shopping experience with the ability to buy products via WhatsApp.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies Used
 
-## Build
+- Angular: Framework for building both the dashboard and the e-commerce website.
+- Angular Material: UI component library for Angular.
+- Firebase: Backend platform for storing product data and images, as well as enabling WhatsApp integration.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Installation and Usage
 
-## Running unit tests
+For detailed installation instructions and usage guidelines, please refer to the individual README files in the `dashboard` and `ecommerce-website` directories.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## License
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
