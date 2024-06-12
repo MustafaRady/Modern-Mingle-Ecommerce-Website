@@ -80,7 +80,7 @@ export class CheckoutComponent implements OnInit {
       "--Order: " + message.order + "\n" +
       "--Sub Total: "+message.subTotal+" $";
 
-      // const shopOwnerNumber = '+96176771908'; // Shop owner's WhatsApp number in international format without '+'
+      // const shopOwnerNumber = '#######'; // Shop owner's WhatsApp number in international format without '+'
       // const encodedMessage = encodeURIComponent(messageToSent);
       // const url = `https://wa.me/${shopOwnerNumber}?text=${encodedMessage}`;
       // this.error ='';
