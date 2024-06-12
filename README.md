@@ -1,9 +1,8 @@
 # Clothing Store Dashboard and E-commerce Website
 
-This repository contains both the Angular-based dashboard for managing a clothing store and the user-facing e-commerce website.
+This repository contains e-commerce website.
 
 ## Features
-
 
 - **E-commerce Website**:
   - Explore different categories of clothes.
