@@ -11,6 +11,9 @@ import namer from 'color-namer';
 })
 export class CheckoutComponent implements OnInit {
 
+  showPopup: boolean = false;
+  popupMessage: string = '';
+
   error:string = "";
   order:Garment;
   subTotal:number = 0;
@@ -70,22 +73,31 @@ export class CheckoutComponent implements OnInit {
         size:this.productInfo.size
       } 
       let messageToSent = 
-      "Full Name: "+message.fullName+"\n"+
-      "Address: "+message.address+"\n"+
-      "City: "+message.city+"\n"+
-      "Color: "+message.color+"\n"+
-      "Order: " + message.order + "\n" +
-      "Sub Total: "+message.subTotal+" $";
+      "--Full Name: "+message.fullName+"\n"+
+      "--Address: "+message.address+"\n"+
+      "--City: "+message.city+"\n"+
+      "--Color: "+message.color+"\n"+
+      "--Order: " + message.order + "\n" +
+      "--Sub Total: "+message.subTotal+" $";
 
-      const shopOwnerNumber = '+96176771908'; // Shop owner's WhatsApp number in international format without '+'
-      const encodedMessage = encodeURIComponent(messageToSent);
-      const url = `https://wa.me/${shopOwnerNumber}?text=${encodedMessage}`;
-      this.error ='';
-      window.open(url, '_blank');
+      // const shopOwnerNumber = '+96176771908'; // Shop owner's WhatsApp number in international format without '+'
+      // const encodedMessage = encodeURIComponent(messageToSent);
+      // const url = `https://wa.me/${shopOwnerNumber}?text=${encodedMessage}`;
+      // this.error ='';
+      // window.open(url, '_blank');
+      this.popupMessage = messageToSent
+
+      // Show the popup
+      this.showPopup = true;
     }
     else{
       
       this.error = "Please fill all the fields!";
     }
+  }
+
+  closePopup(): void {
+    // Hide the popup
+    this.showPopup = false;
   }
 }

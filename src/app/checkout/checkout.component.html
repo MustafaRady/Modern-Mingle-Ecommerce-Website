@@ -1,4 +1,18 @@
 <div class="checkoutContainer"> 
+
+    <div class="popup-container" *ngIf="showPopup">
+        <div class="popup">
+          <div class="popup-header">
+            <span>Buying Is Not Available Right Now</span>
+            <button (click)="closePopup()">Close</button>
+          </div>
+          <div class="popup-body">
+            <h4>Note that this message is going to be set when opening whatsapp</h4>
+            <p>{{ popupMessage }}</p>
+          </div>
+        </div>
+      </div>
+
     <div class="checkoutTitle">
         Billing Details
     </div>
